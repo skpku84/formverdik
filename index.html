@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si-Cerdik KPM PKH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @media print {
+            .no-print { display: none; }
+            .page-break { page-break-after: always; }
+        }
+        .drag-over { border-color: #3b82f6; background-color: #eff6ff; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+<div class="no-print container mx-auto px-4 py-8 max-w-4xl">
+    <div class="text-center mb-10">
+        <h1 class="text-4xl font-extrabold text-slate-800 mb-2">FORM VERDIK GENERATOR</h1>
+        <p class="text-slate-600">Sistem Cetak Formulir Verifikasi Pendidikan PKH - Praktis, Cepat, dan Rapi</p>
+    </div>
+
+    <div id="dropzone" class="border-4 border-dashed border-slate-300 rounded-2xl p-12 text-center transition-all cursor-pointer bg-white hover:border-blue-400">
+        <div class="flex flex-col items-center">
+            <i data-lucide="folder-open" class="w-16 h-16 text-slate-400 mb-4"></i>
+            <p class="text-lg text-slate-600">Tarik & Lepaskan File CSV di sini atau <span class="text-blue-600 font-semibold">Klik untuk Pilih</span></p>
+            <input type="file" id="fileInput" class="hidden" accept=".csv">
+        </div>
+    </div>
+
+    <div class="mt-8 flex gap-4 justify-center">
+        <button id="generateBtn" class="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 shadow-lg transition">
+            <i data-lucide="settings"></i> GENERATE FORM
+        </button>
+        <button id="printBtn" class="flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-emerald-700 shadow-lg transition">
+            <i data-lucide="save"></i> SIMPAN PDF / CETAK
+        </button>
+    </div>
+</div>
+
+<div id="printArea" class="bg-white p-4"></div>
+
+<script src="script.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
