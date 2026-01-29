@@ -1,2 +1,2 @@
 # formverdik
-form verdik generato
+form verdik generator
